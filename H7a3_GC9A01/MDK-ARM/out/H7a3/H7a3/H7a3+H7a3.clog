@@ -1,0 +1,13 @@
+# CMSIS Build Audit File generated on 2023-08-05T22:39:17
+
+# Project Description File: c:/Users/Mr.zhou/Desktop/H7a3/MDK-ARM/H7a3+H7a3.cprj
+
+# Toolchain Configuration File: C:/Users/Mr.zhou/.vcpkg/artifacts/fd3d78d7/tools.open.cmsis.pack.cmsis.toolbox/2.0.0/etc/AC6.6.18.0.cmake
+
+# Package: ARM.CMSIS.5.9.0
+  Location: C:\Users\Mr.zhou\AppData\Local\Arm\Packs/ARM/CMSIS/5.9.0/
+
+  * Component: ARM::CMSIS.CORE:5.6.0
+
+# Package: Keil.STM32H7xx_DFP.3.1.1
+  Location: C:\Users\Mr.zhou\AppData\Local\Arm\Packs/Keil/STM32H7xx_DFP/3.1.1/

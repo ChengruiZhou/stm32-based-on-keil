@@ -1,0 +1,9 @@
+build-idx:
+  generated-by: csolution version 2.0.0
+  csolution: H7a3.csolution.yaml
+  cprojects:
+    - cproject: H7a3.cproject.yaml
+  cbuilds:
+    - cbuild: H7a3+H7a3.cbuild.yml
+      project: H7a3
+      configuration: +H7a3

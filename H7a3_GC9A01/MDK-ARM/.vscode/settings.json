@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "gpio.h": "c",
+        "usart.h": "c",
+        "main.h": "c",
+        "spi.h": "c",
+        "lcd_init.h": "c",
+        "pic.h": "c",
+        "stdint.h": "c",
+        "lcdfont.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
