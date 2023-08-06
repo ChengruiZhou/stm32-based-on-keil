@@ -124,10 +124,9 @@ void OLED_DrawRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2,uint1
                 fc 字的颜色
                 bc 字的背景色
                 sizey 字号
-                mode:  0非叠加模式  1叠加模式
       返回值：  无
 ******************************************************************************/
-void OLED_ShowChar(uint16_t x,uint16_t y,uint8_t num,uint16_t fc,uint16_t bc,uint8_t sizey,uint8_t mode)
+void OLED_ShowChar(uint16_t x,uint16_t y,uint8_t num,uint16_t fc,uint16_t bc,uint8_t sizey)
 {
 	uint8_t temp,sizex,t,m=0;
 	uint16_t i,TypefaceNum;//一个字符所占字节大小
@@ -138,11 +137,7 @@ void OLED_ShowChar(uint16_t x,uint16_t y,uint8_t num,uint16_t fc,uint16_t bc,uin
 	OLED_Address_Set(x,y,x+sizex-1,y+sizey-1);  //设置光标位置 
 	for(i=0;i<TypefaceNum;i++)
 	{ 
-		if(sizey==12)temp=ascii_1206[num][i];		       //调用6x12字体
-		else if(sizey==16)temp=ascii_1608[num][i];		 //调用8x16字体
-		else if(sizey==24)temp=ascii_2412[num][i];		 //调用12x24字体
-		else if(sizey==32)temp=ascii_3216[num][i];		 //调用16x32字体
-		else return;
+		temp=ascii_1608[num][i];
 		for(t=0;t<8;t++)
 		{
             if(temp&(0x01<<t))OLED_WriteData(fc);
@@ -167,11 +162,11 @@ void OLED_ShowChar(uint16_t x,uint16_t y,uint8_t num,uint16_t fc,uint16_t bc,uin
                 mode:  0非叠加模式  1叠加模式
       返回值：  无
 ******************************************************************************/
-void OLED_ShowString(uint16_t x,uint16_t y,const uint8_t *p,uint16_t fc,uint16_t bc,uint8_t sizey,uint8_t mode)
+void OLED_ShowString(uint16_t x,uint16_t y,const uint8_t *p,uint16_t fc,uint16_t bc,uint8_t sizey)
 {         
 	while(*p!='\0')
 	{       
-		OLED_ShowChar(x,y,*p,fc,bc,sizey,mode);
+		OLED_ShowChar(x,y,*p,fc,bc,sizey);
 		x+=sizey/2;
 		p++;
 	}  

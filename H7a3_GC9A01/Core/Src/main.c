@@ -29,6 +29,7 @@
 #include "lcd_init.h"
 #include "lcd.h"
 #include "pic.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,7 +96,7 @@ int main(void)
   MX_USB_OTG_HS_USB_Init();
   MX_SPI1_Init();
   MX_USART3_UART_Init();
-  HAL_UART_Transmit(&huart3,"test\r\n",sizeof("test\r\n"),HAL_MAX_DELAY);
+  // HAL_UART_Transmit(&huart3,"test\r\n",sizeof("test\r\n"),HAL_MAX_DELAY);
   /* USER CODE BEGIN 2 */
   OLED_Init();
   OLED_Fill(0,0,LCD_W,LCD_H,WHITE);
@@ -106,7 +107,8 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		OLED_ShowPicture(50,50,240,240,gImage_bmp);
+    // OLED_Fill(50,50,190,190,BLACK);
+    OLED_ShowPicture(0,0,240,240,gImage_d);
     HAL_UART_Transmit(&huart3,"LCD_Diameter\r\n",sizeof("LCD_Diameter\r\n"),HAL_MAX_DELAY);
     HAL_Delay(1000);
     /* USER CODE BEGIN 3 */

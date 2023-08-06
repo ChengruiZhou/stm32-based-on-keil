@@ -8,8 +8,8 @@ void OLED_DrawRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2,uint1
 void OLED_DrawLine(uint16_t x1,uint16_t y1,uint16_t x2,uint16_t y2,uint16_t color);
 void OLED_DrawPoint(uint16_t x,uint16_t y,uint16_t color);
 void OLED_Fill(uint16_t xsta,uint16_t ysta,uint16_t xend,uint16_t yend,uint16_t color);
-void OLED_ShowChar(uint16_t x,uint16_t y,uint8_t num,uint16_t fc,uint16_t bc,uint8_t sizey,uint8_t mode);
-void OLED_ShowString(uint16_t x,uint16_t y,const uint8_t *p,uint16_t fc,uint16_t bc,uint8_t sizey,uint8_t mode);
+void OLED_ShowChar(uint16_t x,uint16_t y,uint8_t num,uint16_t fc,uint16_t bc,uint8_t sizey);
+void OLED_ShowString(uint16_t x,uint16_t y,const uint8_t *p,uint16_t fc,uint16_t bc,uint8_t sizey);
 //画笔颜色
 #define WHITE         	 0xFFFF
 #define BLACK         	 0x0000	  

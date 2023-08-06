@@ -1,4 +1,4 @@
-# CMSIS Build CMakeLists generated on 2023-08-05T16:33:05
+# CMSIS Build CMakeLists generated on 2023-08-06T21:29:56
 
 cmake_minimum_required(VERSION 3.22)
 

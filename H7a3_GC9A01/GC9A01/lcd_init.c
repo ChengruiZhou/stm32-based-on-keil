@@ -154,7 +154,7 @@ void OLED_Init(void)
     //         OLED_SendByte(0x88);
     //         break;
     // }
-    OLED_SendByte(0x48);
+    OLED_SendByte(0x08);
 
 
     OLED_SendCMD(0x3A); // COLOR_MODE
